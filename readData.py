@@ -1,8 +1,11 @@
 # In this file we will read the data and plot
 # oxygen level vs depth
 
-f_input = open('Data/met_090_1_001.ctd',
- 'r')
+import sys
+
+filename = sys.argv[1]
+
+f_input = open(filename, 'r')
 
 doneWithHeader = False
 depthList = []
@@ -33,7 +36,8 @@ for line in f_input:
 
 f_input.close()    
 
-import matplotlib.pyplot as plt
-plt.plot(oxList, depthList)
-plt.title('oxygen level at different depths')
-plt.show()
+#import matplotlib.pyplot as plt
+#plt.plot(oxList, depthList)
+#plt.title('oxygen level at different depths')
+#plt.show()
+print sum(oxList) / len(oxList)
