@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/2014-08-21-Kiel</title>
+</head>
+<body><br
+/>Welcome to MoPad!<br
+/><br
+/>This pad text is synchronized as you type, so that everyone viewing this page sees the same text.&nbsp; This allows you to collaborate seamlessly on documents!<br
+/><br
+/>Please be cognizant of whether you are using a public pad or private/team pad, and take appropriate precautions with data you post here!<br
+/><br
+/>&nbsp;<br
+/>&nbsp;<br
+/>&nbsp;Bernhard:<br
+/>&nbsp;Hello everybody :)<br
+/>&nbsp;This is our shared notebook!<br
+/><br
+/><br
+/><a href="https://dl.dropboxusercontent.com/u/2795534/history.txt">https://dl.dropboxusercontent.com/u/2795534/history.txt</a><br
+/><br
+/><br
+/><a href="http://bernhardkonrad.github.io/2014-08-21-Kiel-Instructors/Shell/lesson.md">http://bernhardkonrad.github.io/2014-08-21-Kiel-Instructors/Shell/lesson.md</a><br
+/><br
+/><br
+/>&nbsp;<br
+/><b>&nbsp;BASH:</b><br
+/>&nbsp;whoami<br
+/>&nbsp;pwd --&gt; print working directory<br
+/>ls&nbsp; # list out the files and directories under current directory<br
+/>ls -F&nbsp;<br
+/>ls FOLDERNAME&nbsp;&nbsp; #list files and directories in specified folder<br
+/>ls -F -a # all files, also hidden files<br
+/>ls . # content current folder<br
+/>ls .. # content parent folder<br
+/>cd FOLDERNAME # change directory<br
+/>ls /FOLDERNAME # absolute path<br
+/>cd # goes to home directory<br
+/>cd ~# goes to home directory<br
+/>ls --help&nbsp; #doesn't work on a Mac<br
+/>man ls # manual #doesn't work on Windows<br
+/>ls -s #shows the size of the files<br
+/>ls -s -h #makes it readable for humans#the -h just changes the file size into KB and adds the units<br
+/>ls -l -h #use this for Macs<br
+/>ls -h # prints the same as "ls"<br
+/><br
+/><br
+/>"arrow up/down" #move upwards/downwards in the command history<br
+/>use tabstop to autocomplete filenames and commands<br
+/><br
+/><br
+/><a href="http://www.math.ubc.ca/~konradbe/swc-kiel/Data.zip">http://www.math.ubc.ca/~konradbe/swc-kiel/Data.zip</a><br
+/><br
+/>mkdir # make directory<br
+/>rmdir # remove directory<br
+/><br
+/>cat FILENAME # content of file<br
+/>head FILENAME # first 10 lines of file<br
+/>head -n 100 FILENAME # first 100 lines of file<br
+/>tail FILENAME # bottom of file<br
+/>tail -n 42 FILENAME # last 42 lines of file<br
+/>wc FILENAME # word count (lines, words, bytes)<br
+/>wc -l FILENAME # line count<br
+/>ls &gt; FILENAME # save ls output to file<br
+/>ls | wc # word count for directory #the pipe "|" is to take the output of the command before as the input of the command after<br
+/># Be carefull with "&gt;", you could use "&gt;&gt;" instead; or always use Tab to get an idea if the file exist already<br
+/><br
+/><br
+/>challenge:<br
+/><br
+/>Create a file middle.txt that contains lines 100-110 of met_090_1_001.ctd<br
+/>head -n 110 met_090_1_001.ctd #1.- Show first 110 lines of file<br
+/><br
+/>head -n 110 met_090_1_001.ctd | tail -n 11 &gt; middle.txt #2. takes the first 110 lines and erases the first 99 then writes the result as a file "middle.txt"<br
+/><br
+/><br
+/>Back at 13:15. Enjoy your lunch :)<br
+/><br
+/><br
+/><br
+/><b>Git session</b><br
+/><br
+/>if Mac or Linux:<br
+/>git config —global core.editor “nano”<br
+/>if Windows<br
+/>git config —global core.editor “notepad.exe”<br
+/>git init #initialized empty Git repository in …swcKiel folder&nbsp;<br
+/>#look at "git cheat sheet" for the rest<br
+/>ls -a # to show hidden folders<br
+/>touch Readme.txt<br
+/>vi Readme.txt<br
+/>nano Readme.txt&nbsp; #for mac<br
+/>notepad Readme.txt&nbsp; #for windows<br
+/>git status #check the situation in your repository<br
+/>git add Readme.txt #add Readme.txt to the files that are monitored by git<br
+/>git commit -m “My very first git ever”<br
+/>git diff filename&nbsp; #shows the file differences not yet staged<br
+/>git log #see all comments added together with commit<br
+/><b>to copy from the screen in Windows: right click at bar at the top, choose Edit and then Mark. when you mark it automatically copies, then choose Insert. If it does not automatically copy, choose Edit and the copy, then choose Insert</b><br
+/>git checkout ID_of_commit #go back to before this commit<br
+/>git checkout master #check all the commits<br
+/>git checkout — #undo changes that have not been added/committed to git<br
+/><b>if there are unsaved changes and you don’t want them you have to do this first? exactly# doesn’t work for me, just shows list of changed files</b><br
+/><br
+/><br
+/><b>with Github you can now share your file and collaborate</b><br
+/><a href="https://github.com/BernhardKonrad/swcKiel">https://github.com/BernhardKonrad/swcKiel</a><br
+/>​<br
+/><br
+/><a href="https://raw.githubusercontent.com/BernhardKonrad/swcKiel/master/Scripts/gen-survey-database_swc_pgsql.py">https://raw.githubusercontent.com/BernhardKonrad/swcKiel/master/Scripts/gen-survey-database_swc_pgsql.py</a><br
+/><br
+/><br
+/><br
+/>Rainer 140823:&nbsp;<br
+/>"""<br
+/>There are two ways to get an sql shell running. If you have command line tools for sql running, you can start it directly from the terminal.&nbsp;<br
+/>Just type: psql "user=your_username dbname=database_you_want_to_connect_to host=localhost" (((You can leave out user and host if the default settings are correct)))<br
+/><br
+/>You can start the psql shell from applications, the launchpad, or in your windows program selection. This one will directly connect to pgsql and will ask you for username, database name etc. Below prompt shows the command line for this: in [] brackets are the default settings.<br
+/>"""<br
+/><br
+/>#open the sql shell and then press enter until you see the last line (enter your pw when asked- this is either<b> the one you entered when installing this</b> or the one from your computer)<br
+/>Server [localhost]:&nbsp;<br
+/>Database [postgres]:&nbsp;<br
+/>Port [5432]:&nbsp;<br
+/>Username [postgres]:&nbsp;<br
+/>Password for user postgres:&nbsp;<br
+/>psql (9.3.5)<br
+/>Type "help" for help.<br
+/><br
+/>postgres=#&nbsp;<br
+/><br
+/><br
+/><br
+/><br
+/>SQL<br
+/><br
+/>a1) getting a database running<br
+/><br
+/>!!!This only works as the postgres user which has superuser permissions. The postgres user can CREATE ROLE s (different word for users) and CREATE DATABASE s!!!<br
+/><br
+/># to create a new user type:<br
+/><br
+/>CREATE ROLE username PASSWORD 'password' LOGIN; (password needs to be in '')<br
+/><br
+/>## LOGIN is needed to enable login, this is not default<br
+/><br
+/><br
+/># to create a database "test" with the owner "username"<br
+/># this only works when logged in over the sql shell as postgres / into the postgres&nbsp;<br
+/><br
+/>CREATE DATABASE survey WITH OWNER = username;&nbsp;<br
+/><br
+/><br
+/>with<br
+/>postgres=# \l&nbsp; #to check the databases created<br
+/>postgres=# \q&nbsp; #to quit<br
+/><br
+/>Then, modify the script gen-survey-database_swc_pgsql.py and replace user and password with the username and password from above<br
+/><br
+/>Finally, run the script python script (in swcKiel/Scripts)<br
+/>python gen-survey-database_swc_pgsql.py<br
+/><br
+/>If there are no errors, pat yourself on the back: you are all set<br
+/><br
+/>#Solution for Windows: open SQL shell (psql) from programs type password when asked (password of your computer or password you typed in during installation of the program)&nbsp;<br
+/>#once you created your own database: survey change the ownername and password in the script.&nbsp;<br
+/>#open&amp;edit the script in Notepad++<br
+/>#<br
+/><br
+/>solution for linux to login to psql as postgres user:<br
+/>sudo su postgres # change current bash session to use postgres username<br
+/>psql "user=postgres" # should not give psql: FATAL:&nbsp; Peer authentication failed for user "postgres" anymore but start postgreSQL<br
+/>Cool, thank you :)<br
+/><br
+/># solution to start psql from git-bash on Windows 7<br
+/># The psql.exe isn't found by the shell because it's not in the (search) PATH of Windows<br
+/>#<br
+/># 1. First locate where you installed PostgreSQL and check for the executable (binary) "psql.exe"<br
+/># (Should be something like "C:\Program Files\PostgreSQL\9.3\bin"<br
+/><br
+/>#(on my machine, this only worked when I entered the path name in english ("program files" NOT "programme") even though I have a german OS and the folder is displayed as "Programme" in the explorer)<br
+/><br
+/># 2. Go to your desktop, right click on the Computer icon and choose Properties<br
+/># 3. In the System window click on Advanced system settings in the left pane<br
+/># 4. In the System Properties window select Advanced tab and click on Environment Variables… button given at the bottom of the window<br
+/># 5. In the Environment Variables window you will notice two columns User variables for a username and System variables.<br
+/># 6a. If you alread have a User variable named "PATH", select this one, choose edit, and append the above path to the end of the variable (separated by ";").<br
+/># 6b. If you don't have a User variable named "PATH", create one and add the above path to the Variable value.<br
+/># 7. Save/Ok all your way out again, restart your git-bash window and the "psql" command should work.<br
+/><br
+/>Do the same for Notepad++ if you want to run it from the shell...<br
+/><br
+/>#for Mac users: I installed postgreSQL via Macports, not with the GUI installer. Finally got everything up and running until trying the following command:&nbsp;<br
+/>python gen-survey-database_swc_pgsql.py<br
+/># I get: Traceback (most recent call last):<br
+/>#File "gen-survey-database_swc_pgsql.py", line 19, in &lt;module&gt;<br
+/>#&nbsp;&nbsp;&nbsp; import pandas.io.sql as sql<br
+/>#ImportError: No module named pandas.io.sql<br
+/>#other modules (e.g. nose) seem to be missing as well.<br
+/>If you install python with Anaconda these modules (pandas, nose) will be installed with it.<br
+/><br
+/><br
+/><b>Day 2</b><br
+/><br
+/>#for Windows: run command in Git-Bash:<br
+/>python gen-survey-database_swc_pgsql.py in Git Bash&nbsp;<br
+/># in SQL shell (psql) got to "survey" database to see if it works: \d<br
+/><br
+/>\d #shows the tables in your database&nbsp;<br
+/>\d person #(person for this database) shows some details regarding to the person table<br
+/><br
+/>#SQL is NOT case sensitive write comments in caps lock, file names etc in small letters.&nbsp;<br
+/>#Writing sql command as SELECT/FROM/WHERE/As is to distinguish them from the&nbsp;&nbsp; variables only for yourself, so that it is easier for you to read.<br
+/><br
+/>An SQL command in the sql shell is finished with a semicolon ;<br
+/><br
+/>SELECT * FROM person #shows everything in the table person&nbsp;<br
+/>SELECT reading FROM survey;&nbsp; # shows the contents of the column 'reading' from the table 'survey'<br
+/>SELECT avg(reading) AS avg_temp FROM survey WHERE quant = 'temp';&nbsp; # computes the average of all the temperature readings under the name 'avg_temp'; the column 'quant' gives you the type of measurement (in this case, temperature), and the column 'reading' gives you the actual value. WHERE quant = 'temp' restricts the output to the quantity temperature. You need to put temp into single quotation marks, as this is a string.<br
+/>SELECT DISTINCT(quant) FROM survey; # gives you the names of all different entries (data types) in column 'quant' and the number of different entries as number of rows<br
+/>SELECT COUNT(DISTINCT(quant)) FROM survey; # gives you just the number of different data types in column 'quant'<br
+/>SELECT quant, AVG(reading) FROM survey GROUP BY quant; # gives you the average of each of the different measurements(reading) for each quant, i.e. average temperature, average salinity, average radiation<br
+/>SELECT quant, COUNT(reading) FROM survey GROUP BY quant; # same as above, but counts measurements in each data type group instead of calculating the average.<br
+/><br
+/><br
+/>#we want to combine survey and person tables. #person.ident and survey.person are identical, hence the joining is possible; this produces a combined&nbsp; table from person and survey to link person to&nbsp; measurement, i.e. figure&nbsp; out who did which measurement<br
+/><br
+/>SELECT ident, personal, family, quant, reading, person FROM survey JOIN person ON person.ident = survey.person;<br
+/>#this doesn't include the data without personal/identity information so write this:&nbsp;<br
+/>SELECT ident, personal, family, quant, reading, person FROM person RIGHT JOIN SURVEY ON person.ident = survey.person; #gives you all measurements, including those that don't have a person doing the measurements. opposite is LEFT JOIN, gives you only the measurements including a person, and the persons that didn't do measurements<br
+/><br
+/><br
+/>Be aware of NULL or NaN or -999 etc., these are ways to write that there is no data. This is different to 0 and you have to think about how to deal with it in with regards to your data!<br
+/><br
+/><br
+/><br
+/>Rainer:<br
+/><br
+/>"""<br
+/>main sql commands covered:<br
+/><br
+/><br
+/>SELECT<br
+/>FROM&nbsp;<br
+/>AS<br
+/>(LEFT/RIGHT) JOIN<br
+/>GROUP BY<br
+/>WHERE (works well with =, &gt;, &lt;, BETWEEN a and b)<br
+/><br
+/>DISTINCT<br
+/><br
+/>Math operations: MIN, MAX, AVG, COUNT<br
+/>"""<br
+/><br
+/><br
+/><br
+/><b>Intro to Python&nbsp;</b><br
+/>---------------------<br
+/><br
+/>git clone <a href="https://github.com/BernhardKonrad/swcKiel.git">https://github.com/BernhardKonrad/swcKiel.git</a><br
+/><br
+/>print 'Hello'<br
+/>x = 5 #stores 5 as variable x<br
+/>y = 78 * x<br
+/>type (x) #gives the type of the variable (integer, string)<br
+/><br
+/>exit() # exits python and goes to shell.&nbsp;<br
+/><br
+/>create a file named hello.py in text editor saying: print "Hello world!"&nbsp;<br
+/>python hello.py #calls the script in shell<br
+/><br
+/><br
+/>If you clone swcKiel:<br
+/>ipython notebook --profile-dir=ipython-trainingwheels<br
+/><br
+/><br
+/>If you did not clone:<br
+/>ipython notebook<br
+/><br
+/>If neither works:<br
+/>python intro.py<br
+/>and text editor<br
+/><br
+/><br
+/>To see what you are missing:<br
+/><a href="http://nbviewer.ipython.org/github/BernhardKonrad/swcKiel/blob/master/PythonIntro.ipynb">http://nbviewer.ipython.org/github/BernhardKonrad/swcKiel/blob/master/PythonIntro.ipynb</a><br
+/><br
+/># you can use the notebook instead of shell but it works only if you clone the swcKiel.git which is shared above.&nbsp;<br
+/><br
+/>mystring = "Let's do this"<br
+/>print dir(mystring) #list all built-in string functions<br
+/>print mystring.swapcase() #doesn't take an argument, hence () are empty<br
+/>a = 1<br
+/>b = 2<br
+/>c = a+b<br
+/>d = a/b<br
+/>print d #gives 0, when we expect 0.5<br
+/>print type(a), type(b), type(c), type(d) #prints types, i.e. int. BEWARE: computations between integers will always result in integers. Which may be arithmetically wrong. Fix by using floats<br
+/>a = 1.0<br
+/>b = 2.0<br
+/>d = a/b<br
+/>print d #gives 0.5<br
+/>print type(a), type(b), type(d)<br
+/>voltages = [-2.0, -1.0, 0.0, 1.0, 2.0] #makes a list<br
+/>print type(voltages)<br
+/>print voltages[0] #prints the first element in the list (!). Indices in python start at 0.<br
+/>print voltages[3] #prints the 4th element in the list<br
+/>print voltages[1:3] #gives elements 1 and 2, i.e. the 2nd and 3rd entry of the list. Endpoint (i.e. the 3) is not included<br
+/>print len(voltages) #5<br
+/>print voltages[2:] #gives elements 2 to 4 (the end of the list), i.e. the 3rd to 5th entry of the list&nbsp;<br
+/>print voltages[:2] #gives elements 0 and 1<br
+/>print voltages[:] #gives entire list<br
+/><b>#Flow control</b><br
+/>print 2+2 == 4 # == checks whether sth is true or false; gives TRUE<br
+/>print 5 &lt; 3.5 or 4==5-1 #TRUE because one of them is correct (OR only requires one of the statements to be correct to return TRUE)<br
+/>print 5 &lt; 3.5 and 4==5-1 #FALSE because only one of them is correct (AND requires both statements to be correct to return TRUE)<br
+/>print 5 &lt; 3.5 or not 'lunch' == 'breakfast' #TRUE because one of them is correct<br
+/><br
+/><b>#if statement</b><br
+/>x = -5<br
+/>if x &lt; 0:<br
+/>&nbsp;&nbsp;&nbsp; print "x is negative" #if statement doesn't require an 'end' statement, only indentation<br
+/>&nbsp;&nbsp;&nbsp; print "this is inside the if statement"<br
+/>&nbsp;&nbsp;&nbsp; if x &lt; -10<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "x is really negative" #nested if statement<br
+/>print "this is outside the if statement"<br
+/><br
+/>#if your text editor is familiar with python then the indentation is always 4 space. if not do 4 space by yourself. if the intendations are not the same within if statement shell will give you error.&nbsp; special note for Notepad++ 1 tab is 4 space.&nbsp; but try to avoid tab because tab might be different in different operating systems. use space button instead of tab.&nbsp;<br
+/><br
+/>x = 15&nbsp;<br
+/>if x &lt; 0:<br
+/>&nbsp;&nbsp;&nbsp; print "x is negative"&nbsp;<br
+/>elif x == 0:<br
+/>&nbsp;&nbsp;&nbsp; print "x is zero"<br
+/>elif x &gt; 0:<br
+/>&nbsp;&nbsp;&nbsp; print "x is positive"<br
+/><br
+/><br
+/>x = 15<br
+/>if x &lt; 0:<br
+/>&nbsp;&nbsp;&nbsp; print "x is negative"&nbsp;<br
+/>if x == 0:<br
+/>&nbsp;&nbsp;&nbsp; print "x is zero"<br
+/>if x &gt; 0:<br
+/>&nbsp;&nbsp;&nbsp; print "x is positive"&nbsp;<br
+/><br
+/># both work and they are not different when you have only 10 line data but as soon as the data gets bigger the second one will consume much more time then elif command. with elif command: when it reaches its aim in the first line then it doesnt try with other elif commands but in if if if command it tries with each if statement - time consuming.&nbsp;<br
+/><br
+/><b>#for loops&nbsp;</b><br
+/><br
+/>fruits = ['apples', 'oranges', 'bananas']<br
+/>prices = [0.49, 0.99, 0.32]<br
+/>for fruit in fruits:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print fruit<br
+/>#for each fruit will be assigned to single word indicated so outcome will be&nbsp;<br
+/>apples&nbsp;<br
+/>oranges&nbsp;<br
+/>bananas<br
+/><br
+/><br
+/>for i in range(min(len(fruits),len(prices))):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print prices[i], fruits[i]<br
+/><br
+/>Lisa solution:<br
+/>fruits = ['apples', 'oranges', 'bananas']<br
+/>prices= [0.49, 0.99, 0.32]<br
+/>for (f,ii) in zip(fruits,range(len(fruits))):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print str(prices[ii]+' '+f)<br
+/><br
+/># this is actually simpler (lisa here):<br
+/>for (pr,f) in zip(prices,fruits):<br
+/>&nbsp;&nbsp;&nbsp; print str(pr)+' '+f<br
+/><br
+/>for price, fruit in zip (prices, fruits):<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print price, fruit&nbsp;<br
+/><br
+/><br
+/># In this file we will read te data and plot oxygen vs depth<br
+/><br
+/>f_input = open('../swcKiel/Data/met_090_1_001.ctd','r')<br
+/><br
+/>for line in f_input:<br
+/>&nbsp; if "Profile" in line:<br
+/>&nbsp;&nbsp;&nbsp; profile = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp; profile = int(profile)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>print profile<br
+/>&nbsp;&nbsp;<br
+/>f_input.close()<br
+/><br
+/>Annette: Can anyone please explain again the difference between using tab and spaces for indenting? I cannot remember anymore...<br
+/><br
+/>Rainer: Hi Anette, there is no difference, you just have to make it consistent. But the agreed upon way to do it in python is to use 4 spaces. If you keep to that your scripts will be meaningful also for other python users.<br
+/><br
+/><br
+/># In this file we will read the data and plot<br
+/># oxygen level vs depth<br
+/><br
+/>f_input = open('Data/met_090_1_001.ctd',<br
+/>&nbsp;'r')<br
+/><br
+/>doneWithHeader = False<br
+/>depthList = []<br
+/>oxList = []<br
+/><br
+/>for line in f_input:<br
+/>&nbsp;&nbsp;&nbsp; if doneWithHeader:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # read and save the data<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dataList = line.split()<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; depth = -float(dataList[1])<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ox = float(dataList[5])<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; depthList.append(depth)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oxList.append(ox)<br
+/><br
+/>&nbsp;&nbsp;&nbsp; else:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if "Profile" in line:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; profile = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; profile = int(profile)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Latitude" in line:&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat = float(lat)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Longitude" in line:&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng = float(lng)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Columns" in line:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # order of columns is consistent<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doneWithHeader = True<br
+/><br
+/>f_input.close()&nbsp;&nbsp;&nbsp;&nbsp;<br
+/><br
+/>import matplotlib.pyplot as plt<br
+/>plt.plot(oxList, depthList)<br
+/>plt.title('oxygen level at different depths')<br
+/>plt.show()<br
+/><br
+/><br
+/><br
+/><br
+/># In this file we will read the data and plot<br
+/># oxygen level vs depth<br
+/><br
+/>import sys<br
+/><br
+/>filename = sys.argv[1]<br
+/><br
+/>f_input = open(filename, 'r')<br
+/><br
+/>doneWithHeader = False<br
+/>depthList = []<br
+/>oxList = []<br
+/><br
+/>for line in f_input:<br
+/>&nbsp;&nbsp;&nbsp; if doneWithHeader:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # read and save the data<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dataList = line.split()<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; depth = -float(dataList[1])<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ox = float(dataList[5])<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; depthList.append(depth)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oxList.append(ox)<br
+/><br
+/>&nbsp;&nbsp;&nbsp; else:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if "Profile" in line:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; profile = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; profile = int(profile)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Latitude" in line:&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat = float(lat)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Longitude" in line:&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng = float(lng)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Columns" in line:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # order of columns is consistent<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doneWithHeader = True<br
+/><br
+/>f_input.close()&nbsp;&nbsp;&nbsp;&nbsp;<br
+/><br
+/>#import matplotlib.pyplot as plt<br
+/>#plt.plot(oxList, depthList)<br
+/>#plt.title('oxygen level at different depths')<br
+/>#plt.show()<br
+/>print sum(oxList) / len(oxList)<br
+/><br
+/><br
+/><br
+/>## FROM THE SHELL<br
+/>for f in Data/*.ctd<br
+/>do<br
+/>python readData.py $f<br
+/>done<br
+/><br
+/>(equivalent syntax for one liner)<br
+/>for f in Data/*.ctd; do python readData.py $f; done<br
+/><br
+/><br
+/>####################<br
+/><br
+/><br
+/>Rainer 140823:<br
+/>Below is the first version of the developed script.<br
+/><br
+/><br
+/># In this file we will read the data and load it to a pgsql database.<br
+/><br
+/>import sys<br
+/>import psycopg2 as pgsql<br
+/><br
+/><br
+/><br
+/>mydb = pgsql.connect(database="survey", user="rkiko", password="rkiko")<br
+/><br
+/>cur = mydb.cursor()<br
+/><br
+/><br
+/><br
+/>cur.execute("""CREATE TABLE IF NOT EXISTS ctd_data<br
+/>(Profile&nbsp;&nbsp;&nbsp; text,<br
+/>Depth FLOAT8,<br
+/>Oxygen_conc&nbsp;&nbsp;&nbsp;&nbsp; FLOAT8<br
+/>)<br
+/>""", mydb)<br
+/><br
+/>mydb.commit()<br
+/><br
+/><br
+/>filename = sys.argv[1]<br
+/><br
+/>f_input = open(filename, 'r')<br
+/><br
+/>doneWithHeader = False<br
+/>depthList = []<br
+/>oxList = []<br
+/><br
+/>for line in f_input:<br
+/>&nbsp;&nbsp;&nbsp; if doneWithHeader == False:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if "Profile" in line:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; profile = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; profile = int(profile)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Latitude" in line:&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat = float(lat)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Longitude" in line:&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng = float(lng)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Columns" in line:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # order of columns is consistent<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doneWithHeader = True<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; continue<br
+/>&nbsp;&nbsp;&nbsp; if doneWithHeader == True:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # read and save the data<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dataList = line.split()<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; depth = -float(dataList[1])<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ox = float(dataList[5])<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; depthList.append(depth)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oxList.append(ox)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print profile, depth, ox<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cur.execute("""INSERT INTO ctd_data(profile, depth, oxygen_conc)&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VALUES (%s, %s, %s)"""<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; %(profile, depth, ox), mydb)<br
+/><br
+/><br
+/>mydb.commit()<br
+/><br
+/><br
+/>f_input.close()&nbsp;&nbsp;&nbsp;&nbsp;<br
+/><br
+/><br
+/>cur.close()<br
+/>mydb.close()<br
+/><br
+/><br
+/>#############################<br
+/><br
+/>Second version with primary key<br
+/><br
+/># In this file we will read the data and plot<br
+/># oxygen level vs depth<br
+/># use the script in a for loop to read in all data<br
+/># e.g. for meteor ctd_data<br
+/>#for f in met*ctd; do python readData_to_pgsql_v1.py $f; done<br
+/>#<br
+/><br
+/><br
+/>import sys<br
+/>import psycopg2 as pgsql<br
+/><br
+/><br
+/><br
+/>mydb = pgsql.connect(database="survey", user="rkiko", password="rkiko")<br
+/><br
+/>cur = mydb.cursor()<br
+/><br
+/><br
+/><br
+/>cur.execute("""CREATE TABLE IF NOT EXISTS ctd_data<br
+/>(Indx TEXT PRIMARY KEY,<br
+/>Profile text,<br
+/>Depth FLOAT8,<br
+/>Oxygen_conc&nbsp;&nbsp;&nbsp;&nbsp; FLOAT8<br
+/>)<br
+/>""", mydb)<br
+/><br
+/>mydb.commit()<br
+/><br
+/><br
+/>filename = sys.argv[1]<br
+/><br
+/>f_input = open(filename, 'r')<br
+/><br
+/>doneWithHeader = False<br
+/>depthList = []<br
+/>oxList = []<br
+/><br
+/>for line in f_input:<br
+/>&nbsp;&nbsp;&nbsp; if doneWithHeader == False:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if "Profile" in line:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; profile = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; profile = int(profile)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Latitude" in line:&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat = float(lat)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Longitude" in line:&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng = line.strip().split("=")[1]<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lng = float(lng)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elif "Columns" in line:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # order of columns is consistent<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doneWithHeader = True<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; continue<br
+/>&nbsp;&nbsp;&nbsp; if doneWithHeader == True:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # read and save the data<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dataList = line.split()<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; depth = -float(dataList[1])<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ox = float(dataList[5])<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; depthList.append(depth)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oxList.append(ox)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ###index not yet perfect<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; indx = "'" + str(profile) + "_" + str(depth) + "'"<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print indx, profile, depth, ox<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cur.execute("""INSERT INTO ctd_data(indx, profile, depth, oxygen_conc)&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VALUES (%s, %s, %s, %s)"""<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; %(indx, profile, depth, ox), mydb)<br
+/><br
+/><br
+/>mydb.commit()<br
+/><br
+/><br
+/>f_input.close()&nbsp;&nbsp;&nbsp;&nbsp;<br
+/><br
+/><br
+/><br
+/>cur.close()<br
+/>mydb.close()<br
+/><br
+/><br
+/><br
+/><br
+/><br
+/><br
+/>####################<br
+/>#now a script to read out data<br
+/># use the script with<br
+/># -&gt; python readData_from_pgsql_v1.py<br
+/># it will print a dataframe with the average oxygen value for each ctd station in the database<br
+/># In this file we will read out data from the pgsql database<br
+/><br
+/><br
+/>import psycopg2 as pgsql<br
+/>import pandas.io.sql as sql<br
+/><br
+/><br
+/><br
+/>mydb = pgsql.connect(database="survey", user="rkiko", password="rkiko")<br
+/><br
+/>cur = mydb.cursor()<br
+/><br
+/>df = sql.read_frame("""select profile, avg(oxygen_conc) as avg_ox&nbsp;<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from ctd_data<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; group by profile<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ORDER BY profile<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; """,&nbsp; mydb)<br
+/>print df<br
+/><br
+/><br
+/>cur.close()<br
+/>mydb.close()<br
+/><br
+/><br
+/><br
+/><br
+/><br
+/><br
+/></body>
+</html>
