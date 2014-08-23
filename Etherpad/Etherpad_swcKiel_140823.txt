@@ -668,7 +668,7 @@ mydb = pgsql.connect(database="survey", user="rkiko", password="rkiko")
 
 cur = mydb.cursor()
 
-df = sql.read_frame("""select profile, avg(oxygen_conc) as avg_ox 
+df = sql.read_sql("""select profile, avg(oxygen_conc) as avg_ox 
                        from ctd_data
                        group by profile
                        ORDER BY profile
