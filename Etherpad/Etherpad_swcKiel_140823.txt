@@ -681,6 +681,43 @@ mydb.close()
 
 
 
+Rainer 140827:
+We now had success to install psycopg2 with 
+
+sudo pip install psycopg2
+
+on some Mac's....
+
+##############
+Furthermore, we got over some further errors of psycopg2 that occur when you import psycopg2 in python:
+
+You might get an error that pg_config is missing, can not be found.
+psycopg2 compiles without modification assuming pg_config can be  found. By default MacPorts doesn't add the Postgres binaries to the path  and without this psycopg2 fails to compile. You can add the  relevant path for Postgres binaries to your  profile.
+
+For this, in your home folder you need to open
+.bash_profile
+
+and add the path to the postgresql binaries. In my case I need to add the following line:
+export PATH=$PATH:/opt/local/lib/postgresql93/bin
+
+The next error could be:
+Library not loaded: libssl.1.0.0.dylib not found
+
+Anwer by Aron Ysidoro on stackoverflow:
+(((((You DO NOT want to link: $DYLD_LIBRARY_PATH in bash or in .bash_profile
+I did that and had a lot of unexpected errors as you are experiencing and noted above.))))
+The fix is to link the libssl and libcrypto from Postgres = /Library/Postgres/9.3/lib to your system /usr/lib
+Here are the commands. First copy your libraries over from Postgres to the system /usr/lib/:
+sudo cp /Library/PostgreSQL/9.3/lib/libssl.1.0.0.dylib /usr/lib
+sudo cp /Library/PostgreSQL/9.3/lib/libcrypto.1.0.0.dylib /usr/lib
+Then update (or create) the /usr/lib symlinks for this libraries. The command is ln -fs:
+sudo ln -fs /usr/lib/libssl.1.0.0.dylib /usr/lib/libssl.dylib
+sudo ln -fs /usr/lib/libcrypto.1.0.0.dylib /usr/lib/libcrypto.dylib
+    
+
+
+
+
 
 
 
