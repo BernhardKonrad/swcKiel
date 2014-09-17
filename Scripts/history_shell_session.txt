@@ -1,0 +1,138 @@
+2014-08-21 10:11:30   start_recording
+2014-08-21 10:12:03   ls
+2014-08-21 10:14:15   ls -F
+2014-08-21 10:15:18   ls users
+2014-08-21 10:15:35   ls -F users
+2014-08-21 10:16:02   ls
+2014-08-21 10:16:24   ls -F -a
+2014-08-21 10:18:36   ls ..
+2014-08-21 10:18:54   ls .
+2014-08-21 10:19:27   ls -F -a
+2014-08-21 10:20:08   cd users
+2014-08-21 10:20:26   pwd
+2014-08-21 10:20:50   ls
+2014-08-21 10:21:05   ls ..
+2014-08-21 10:21:26   ls 
+2014-08-21 10:21:29   pwd
+2014-08-21 10:22:52   ls /home/berny
+2014-08-21 10:23:01   cd ..
+2014-08-21 10:23:02   pwd
+2014-08-21 10:23:11   ls /home/berny
+2014-08-21 10:45:01   cd
+2014-08-21 10:45:08   cd users
+2014-08-21 10:45:10   cd
+2014-08-21 10:45:26   cd users
+2014-08-21 10:45:29   cd ~
+2014-08-21 10:46:29   ls -s -h
+2014-08-21 10:46:59   ls -s
+2014-08-21 10:47:53   ls --help
+2014-08-21 10:47:53   ls --help
+2014-08-21 10:47:53   ls --help
+2014-08-21 10:50:20   help ls
+2014-08-21 10:50:26   man ls
+2014-08-21 10:50:26   man ls
+2014-08-21 10:52:19   cd --help
+2014-08-21 10:52:22   man cd
+2014-08-21 10:52:34   info cd
+2014-08-21 10:53:51   man pwd
+2014-08-21 11:14:26   cd
+2014-08-21 11:14:49   mkdir swcKiel
+2014-08-21 11:16:03   rmdir swcKiel
+2014-08-21 11:16:35   mkdir swcKiel
+2014-08-21 11:17:09   cd swcKiel
+2014-08-21 11:17:14   cd ..
+2014-08-21 11:18:33   cd swcKiel/
+2014-08-21 11:18:37   cd ..
+2014-08-21 11:21:10   cd swcKiel/
+2014-08-21 11:23:27   ls
+2014-08-21 11:23:31   ls Data
+2014-08-21 11:30:06   pwd
+2014-08-21 11:30:09   ls
+2014-08-21 11:30:14   ls Data
+2014-08-21 11:31:42   cd Data
+2014-08-21 11:32:43   cat met_090_1_001.ctd 
+2014-08-21 11:34:00   head 10 met_090_1_001.ctd 
+2014-08-21 11:34:14   head -n 10 met_090_1_001.ctd 
+2014-08-21 11:36:04   tail met_090_1_001.ctd 
+2014-08-21 11:36:55   wc met_090_1_001.ctd 
+2014-08-21 11:37:30   wc -l met_090_1_001.ctd 
+2014-08-21 11:40:18   ls
+2014-08-21 11:41:17   ls > allFiles.txt
+2014-08-21 11:42:15   wc -l allFiles.txt 
+2014-08-21 11:42:57   wc allFiles.txt 
+2014-08-21 11:46:18   ls | wc
+2014-08-21 11:46:18   ls | wc
+2014-08-21 12:05:05   head -n 110 met_090_1_001.ctd 
+2014-08-21 12:07:16   head -n 110 met_090_1_001.ctd | tail -n 11
+2014-08-21 12:07:43   head -n 110 met_090_1_001.ctd | tail -n 11 > middle.txt
+2014-08-21 12:08:05   head -n 76 met_090_1_001.ctd | tail -n 11 > middle.txt
+2014-08-21 12:08:15   cat middle.txt 
+2014-08-21 12:08:15   cat middle.txt 
+2014-08-21 12:08:15   cat middle.txt 
+2014-08-21 12:08:15   cat middle.txt 
+2014-08-21 13:17:48   psql
+2014-08-21 13:17:59   python
+2014-08-21 13:43:02   cd
+2014-08-21 13:43:08   cd swcKiel/
+2014-08-21 13:43:18   git
+2014-08-21 13:43:18   git
+2014-08-21 13:43:18   git
+2014-08-21 13:50:12   git config --global --list
+2014-08-21 13:52:24   pwd
+2014-08-21 13:53:07   git init
+2014-08-21 13:53:47   ls
+2014-08-21 13:54:06   ls -a
+2014-08-21 13:55:15   cd
+2014-08-21 13:55:18   cd swcKiel/
+2014-08-21 13:55:30   git status
+2014-08-21 13:55:30   git status
+2014-08-21 13:55:30   git status
+2014-08-21 13:57:44   nano Readme.txt
+2014-08-21 13:57:44   nano Readme.txt
+2014-08-21 14:00:17   ls
+2014-08-21 14:01:57   git status
+2014-08-21 14:02:44   git add Readme.txt 
+2014-08-21 14:02:48   git status
+2014-08-21 14:04:55   git commit -m "My very first git commit ever, so proud"
+2014-08-21 14:08:40   nano Readme.txt 
+2014-08-21 14:11:24   git status
+2014-08-21 14:12:48   nano Readme.txt 
+2014-08-21 14:12:48   nano Readme.txt 
+2014-08-21 14:13:46   git status
+2014-08-21 14:15:36   git diff Readme.txt
+2014-08-21 14:16:43   git status
+2014-08-21 14:17:08   git add Readme.txt 
+2014-08-21 14:17:11   git status
+2014-08-21 14:17:38   git commit -m "Added another line, to test git diff"
+2014-08-21 14:19:23   git status
+2014-08-21 14:20:27   git log
+2014-08-21 14:21:23   git log --pretty=oneline
+2014-08-21 14:21:47   git log --author=BernhardKonrad
+2014-08-21 14:22:26   git log --name-only
+2014-08-21 14:24:02   ls -a
+2014-08-21 14:24:10   cd .git
+2014-08-21 14:24:11   ls
+2014-08-21 14:24:58   cd ..
+2014-08-21 14:25:12   git log
+2014-08-21 14:26:47   git checkout 0fa1516
+2014-08-21 14:30:24   git log
+2014-08-21 14:32:22   git checkout master
+2014-08-21 14:32:39   git log
+2014-08-21 14:42:21   git checkout master
+2014-08-21 14:42:24   git status
+2014-08-21 14:42:24   git status
+2014-08-21 14:43:45   git checkout -- Readme.txt
+2014-08-21 14:44:19   git status
+2014-08-21 14:44:52   git log
+2014-08-21 14:44:52   git log
+2014-08-21 14:45:23   git checkout 0fa1516
+2014-08-21 15:20:15   git status
+2014-08-21 15:20:26   git checkout -- Readme.txt
+2014-08-21 15:20:28   git status
+2014-08-21 15:20:52   git add Data/*
+2014-08-21 15:20:59   git status
+2014-08-21 15:21:25   git commit -m "Adds all the data files, ready to hand over"
+2014-08-21 15:21:28   git status
+2014-08-21 15:21:40   git status
+2014-08-21 15:24:52   git remote add origin https://github.com/BernhardKonrad/swcKiel.git
+2014-08-21 15:25:01   git push origin master
